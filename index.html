@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Multi Filmes</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style2.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./load.js"></script>
+    <script src="./multiFilmes.js"></script>
+  </head>
+  <body>
+    <header class="headerBar">
+      <div class="appName">MULTI FILMES</div>
+      <div class="badge warning"><span id="estado">0</span></div>
+    </header>
+
+    <div id="tela1" class="component">
+      <div class="componentHeader">
+        <h1 class="componentTitle">Minhas séries e filmes</h1>
+        <button id="btnAdic" class="button primary"> Adicionar filme
+          <img src="./assets/plus1.png" />
+        </button>
+      </div>
+      <div class="componentContent">
+        <div id="blank">
+          <img src="./assets/filme.png" />
+          <p>Nenhum filme/séries cadastrado.</p>
+        </div>
+        <ul id="listaDeFilmes" class="list hidden"></ul>
+      </div>
+    </div>
+
+    <div id="tela2" class="component hidden">
+      <div class="componentHeader">
+        <h1 class="componentTitle">
+          Novo filme ou série
+        </h1>
+      </div>
+      <div class="componentContent">
+        <div class="field">
+          <label for="inputNovoFilme">Titulo:</label>
+          <input id="inputNovoFilme" type="text" autocomplete="off" /><br><br>
+          <label for="inputNovoFilme2">Gênero:</label>
+          <input id="inputNovoFilme2" type="text" autocomplete="off" /><br><br>
+          <label for="inputNovoFilme3">Duração(min):</label>
+          <input id="inputNovoFilme3" type="text" autocomplete="off" /><br><br>
+        </div>
+        <div class="buttonGroup mt1 end">
+          <button id="btnCanc1" class="button quarter light">Cancelar</button>
+          <button id="btnInc" class="button quarter confirm" disabled>
+            Incluir
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="tela3" class="component hidden">
+      <div class="componentHeader">
+        <h1 class="componentTitle">Alteração de filme</h1>
+      </div>
+      <div class="componentContent">
+        <div class="field">
+          <label for="inputAlteraFilme">Titulo:</label>
+          <input id="inputAlteraFilme" type="text" autocomplete="off" /><br><br>
+          <label for="inputAlteraFilme2">Gênero:</label>
+          <input id="inputAlteraFilme2" type="text" autocomplete="off" /><br><br>
+          <label for="inputAlteraFilme3">Duração(min):</label>
+          <input id="inputAlteraFilme3" type="text" autocomplete="off" /><br><br>
+        </div>
+        <div class="buttonGroup end mt1">
+          <button id="btnCanc2" class="button quarter light">Cancelar</button>
+          <button id="btnAlt" class="button quarter confirm">Alterar</button>
+        </div>
+        <div class="buttonGroup end mt3">
+          <button id="btnDel" class="button quarter danger">
+            Apagar filme/série
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
